@@ -12,7 +12,7 @@ import { cookies } from 'next/headers';
 import { Session } from '@supabase/supabase-js';
 
 
-export default function Navbar({ session }: { session: Session | null }) {
+export default function Navbar({ env, session }: { env: string, session: Session | null }) {
     const { theme, setTheme } = useTheme();
 
     return (
@@ -31,7 +31,7 @@ export default function Navbar({ session }: { session: Session | null }) {
                 </div>
                 <Link href="/" className="text-primary">
                     <div className="btn btn-ghost text-md lg:text-lg">
-                        Dyscuss
+                        Dyscuss {env === 'development' ? <small> DEV </small> : <> </> }
                     </div>
                 </Link>
             </div>
