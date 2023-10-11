@@ -11,7 +11,7 @@ export default async function Header() {
 
     return (
         <div>
-            <Navbar session={session} />
+            <Navbar env={process.env.NODE_ENV} session={session} />
         </div>
     )
 }

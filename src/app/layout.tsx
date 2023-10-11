@@ -8,6 +8,9 @@ import ThemeButtons from '../components/themebuttons/themebuttons';
 import Header from '../components/header/header';
 import { Toaster } from 'react-hot-toast';
 
+import Footer from '../components/footer/footer';
+
+import Cookies from '../components/cookies/cookies';
 
 // type Themes = "rebel" | "light" | "imperial" | "dark";
 
@@ -17,17 +20,22 @@ const inter = Inter({ subsets: ['latin'] })
 //   description: 'Tools and Calculators for SWG Legends',
 // }
 
+import bgImage from '../../public/bg-ipsen.jpg';
+
+
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} >
         <ThemeProvider>
           <Header />
-          <div className={"container"}>
-            <Toaster/>
+          <div className="p-5" style={{ backgroundImage: `url(${bgImage.src})`, backgroundAttachment: 'fixed' }}>
+            <Toaster />
             {children}
           </div>
+          <Footer />
+          <Cookies />
         </ThemeProvider>
       </body>
     </html>

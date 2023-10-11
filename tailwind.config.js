@@ -11,16 +11,17 @@ module.exports = {
   ],
   daisyui: {
     daisyui: {
-      themes: ["light", "dark"],
+      themes: ["dark", "light"],
     },
     themes: [
       {
-        light: {
-          "primary": "#333333",
-          "secondary": "#BC1E22",
+        dark: {
+          "primary": "#b5babd",
+          "secondary": "#2c4ebf",
           "accent": "#f97316",
           "neutral": "#2b3440",
-          "base-100": "#ffffff",
+          "base-100": "#323232",
+          "black": "#0f1215",
 
           "imperial": "b5babd",
           "rebel": "333333",
@@ -32,13 +33,12 @@ module.exports = {
         },
       },
       {
-        dark: {
-          "primary": "#b5babd",
-          "secondary": "#2c4ebf",
+        light: {
+          "primary": "#333333",
+          "secondary": "#BC1E22",
           "accent": "#f97316",
           "neutral": "#2b3440",
-          "base-100": "#1d232a",
-          "black": "#0f1215",
+          "base-100": "#ffffff",
 
           "imperial": "b5babd",
           "rebel": "333333",
