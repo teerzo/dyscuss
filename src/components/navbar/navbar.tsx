@@ -74,9 +74,16 @@ export default function Navbar({ env, session }: { env: string, session: Session
 
                 {session?.user ?
                     <div className="dropdown dropdown-end mr-2">
-                        <label tabIndex={0} className="btn btn-circle avatar">
+                        {/* <label tabIndex={0} className="btn btn-circle avatar">
                             <div className="w-10 rounded-full icon">
                                 <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                        </label> */}
+                        <label tabIndex={0} className="btn btn-circle">
+
+                            <div className="flex flex-col justify-center items-center w-10 rounded-full text-center">
+                                <FaUserAlt />
+
                             </div>
                         </label>
 

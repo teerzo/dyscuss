@@ -14,8 +14,8 @@ export default async function SignUpPage() {
     redirect('/')
   }
   return (
-    // <div className="flex h-[calc(100vh-theme(spacing.16))] flex-col items-center justify-center py-10">
-    <div className='flex flex-col items-center'>
+    // <div className="flex h-10 h-[calc(100vh-theme(spacing.16))] flex-col items-center py-10">
+    <div className='flex min-h-screen flex-col items-center'>
       <div className="w-full max-w-xl">
         <LoginForm action="sign-up" />
         {/* <Separator className="my-4" /> */}

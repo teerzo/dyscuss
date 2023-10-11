@@ -14,6 +14,7 @@ import type { Database } from '@/lib/database.types'
 
 
 import Footer from '@/components/footer/footer';
+import IFrame from "../components/iframe/iframe";
 
 export default async function Home() {
 
@@ -27,9 +28,9 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col">
 
-      {/* <div className="flex h-[calc(100vh-theme(spacing.16))] flex-col items-center justify-center py-10"> */}
       <Toaster />
-      <div className="mb-10">
+      {/* <div className=""> */}
+      <div className="flex h-[calc(100vh-theme(spacing.16))] flex-col items-center justify-center py-10">
 
         {session ?
           <div>
@@ -38,19 +39,11 @@ export default async function Home() {
           </div>
           :
           <div>
-            <p> Not signed in </p>
+            {/* <p> Not signed in </p> */}
             {/* <Link href="/login"> <button className="btn"> LOGIN </button> </Link> */}
           </div>
         }
       </div>
-
-      {session ?
-        <div className="mb-10">
-          <h1> JOT FORM IFRAME HERE </h1>
-        </div>
-        : <> </>
-      }
-
     </main>
   )
 }

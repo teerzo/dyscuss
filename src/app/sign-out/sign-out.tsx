@@ -25,6 +25,10 @@ export default function SignOut({ session }: { session: Session | null }) {
     // }
 
     useEffect(() => {
+        toast.success('Signing out...')
+    },[])
+
+    useEffect(() => {
         console.log('session', session);
         handleSignOut();
 
