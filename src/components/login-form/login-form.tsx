@@ -307,10 +307,10 @@ export function LoginForm({
                                                 }} />
                                                 <span className="label-text">
                                                     I confirm that i have read and agree to the
-                                                    <a href="/terms"> Terms of use, </a>
-                                                    <a href="/privacy"> Privacy Policy </a>
+                                                    <a className='underline' href="/terms-and-conditions">Terms of use,</a>
+                                                    <a className='underline' href="/privacy"> Privacy Policy </a>
                                                     and
-                                                    <a href="/cookie"> Cookie Policy </a>
+                                                    <a className='underline' href="/privacy#cookies"> Cookie Policy </a>
                                                     .*
                                                 </span>
                                             </label>

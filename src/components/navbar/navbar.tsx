@@ -23,7 +23,7 @@ export default function Navbar({ env, session }: { env: string, session: Session
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-96 text-primary">
-                        <div className='prose'>
+                        <div className='prose p-5'>
                             <h4> Health Care Professional Members </h4>
                         </div>
                         {/* <li className='mb-2'>
@@ -47,24 +47,24 @@ export default function Navbar({ env, session }: { env: string, session: Session
                     </ul>
                 </div>
                 <Link href="/" className="text-primary">
-                    <div className="btn btn-ghost text-md lg:text-lg">
-                        Dyscuss {env === 'development' ? <small> DEV </small> : <> </>}
+                    <div className="prose btn btn-ghost">
+                        <h3> Dyscuss {env === 'development' ? <small> DEV </small> : <> </>} </h3>
                     </div>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <div className='mr-5'>
-                    <h3> Health Care Professional Members </h3>
+                <div className='prose mr-5'>
+                    <h3 className='font-normal '> Health Care Professional Members </h3>
                 </div>
 
                 <Link href="/">
-                    <div className="btn m-1"> Home </div>
+                    <div className="btn btn-ghost m-1"> Home </div>
                 </Link>
                 <Link href="/case-creator">
-                    <div className="btn m-1"> Case Creator </div>
+                    <div className="btn btn-ghost m-1"> Case Creator </div>
                 </Link>
                 <Link href="/resources">
-                    <div className="btn m-1"> Resources </div>
+                    <div className="btn btn-ghost m-1"> Resources </div>
                 </Link>
                 {/* <span> {session?.user ? <> Logged in </> : <> Logged out </>} </span> */}
             </div>
@@ -118,9 +118,17 @@ export default function Navbar({ env, session }: { env: string, session: Session
             <div className="navbar-end lg:hidden">
                 {session?.user ?
                     <div className="dropdown dropdown-end mr-2">
-                        <label tabIndex={0} className="btn btn-circle avatar">
+                        {/* <label tabIndex={0} className="btn btn-circle avatar">
                             <div className="w-10 rounded-full icon">
                                 <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                        </label> */}
+
+                        <label tabIndex={0} className="btn btn-circle">
+
+                            <div className="flex flex-col justify-center items-center w-10 rounded-full text-center">
+                                <FaUserAlt />
+
                             </div>
                         </label>
 

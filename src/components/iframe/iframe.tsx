@@ -5,7 +5,7 @@
 export default function IFrame() {
 
     return (
-        <div className="w-full overflow-auto" style={{ minHeight: 1600 }}>
+        <div className="w-full">
             <iframe 
                 id="JotFormIFrame-230130515607848"
                 title="DysCuss - Case Study Creator"
@@ -19,8 +19,8 @@ export default function IFrame() {
                 // style={{ minWidth: '100%', maxWidth: '100%', height: 539, border: 'none' }}
                 // scrolling="no"
 
-                className="w-full flex h-[calc(100vh-theme(spacing.16))] flex-col items-center overflow-scroll"
-                style={{minHeight: 1600}}
+                className="w-full flex h-[calc(100vh-theme(spacing.16))] flex-col items-center overflow-scroll iframe-mobile md:iframe-desktop"
+               
             >
             </iframe >
             {/* <script type="text/javascript">
