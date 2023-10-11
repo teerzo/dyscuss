@@ -8,6 +8,7 @@ import ThemeButtons from '../components/themebuttons/themebuttons';
 import Header from '../components/header/header';
 import { Toaster } from 'react-hot-toast';
 
+import Footer from '../components/footer/footer';
 
 // type Themes = "rebel" | "light" | "imperial" | "dark";
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
             <Toaster/>
             {children}
           </div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -22,24 +22,50 @@ export default function Navbar({ env, session }: { env: string, session: Session
                     <label tabIndex={0} className="btn btn-ghost text-sm lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-primary">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-96 text-primary">
+                        <div className='prose'>
+                            <h4> Health Care Professional Members </h4>
+                        </div>
                         {/* <li className='mb-2'>
                             <Link href="/tools" className='text-lg'> Tools </Link>
                         </li> */}
+
+                        <li className='mb-2'>
+                            <div className="text-lg"> Home </div>
+                        </li>
+
+                        <li className='mb-2'>
+                            <div className="text-lg"> Case Creator </div>
+                        </li>
+
+                        <li className='mb-2'>
+                            <div className="text-lg"> Resources </div>
+                        </li>
+
+                        {/* <span> {session?.user ? <> Logged in </> : <> Logged out </>} </span> */}
 
                     </ul>
                 </div>
                 <Link href="/" className="text-primary">
                     <div className="btn btn-ghost text-md lg:text-lg">
-                        Dyscuss {env === 'development' ? <small> DEV </small> : <> </> }
+                        Dyscuss {env === 'development' ? <small> DEV </small> : <> </>}
                     </div>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
+                <div className='mr-5'>
+                    <h3> Health Care Professional Members </h3>
+                </div>
 
-                {/* <Link href="/tools">
-                    <div className="btn m-1"> Tools </div>
-                </Link> */}
+                <Link href="/">
+                    <div className="btn m-1"> Home </div>
+                </Link>
+                <Link href="/case-creator">
+                    <div className="btn m-1"> Case Creator </div>
+                </Link>
+                <Link href="/resources">
+                    <div className="btn m-1"> Resources </div>
+                </Link>
                 {/* <span> {session?.user ? <> Logged in </> : <> Logged out </>} </span> */}
             </div>
 
@@ -71,13 +97,13 @@ export default function Navbar({ env, session }: { env: string, session: Session
                         <Link href="/sign-in">
                             <button className="btn mr-2"> Sign in </button>
                         </Link>
-                        <label tabIndex={0} className="btn btn-circle">
+                        {/* <label tabIndex={0} className="btn btn-circle">
 
                             <div className="flex flex-col justify-center items-center w-10 rounded-full text-center">
                                 <FaUserAlt />
 
                             </div>
-                        </label>
+                        </label> */}
                     </div>
                 }
 

@@ -13,6 +13,8 @@ import { Toaster } from "react-hot-toast";
 import type { Database } from '@/lib/database.types'
 
 
+import Footer from '@/components/footer/footer';
+
 export default async function Home() {
 
   const cookieStore = cookies()
@@ -25,27 +27,30 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col">
 
-      <div className="flex h-[calc(100vh-theme(spacing.16))] flex-col items-center justify-center py-10">
-        <Toaster />
-        <div className="mb-10">
+      {/* <div className="flex h-[calc(100vh-theme(spacing.16))] flex-col items-center justify-center py-10"> */}
+      <Toaster />
+      <div className="mb-10">
 
-          {session ?
-            <div>
-              <p> Welcome back: {session?.user.email} </p>
-              {/* <Link href="/logout"> <button className="btn"> LOG OUT </button> </Link> */}
-            </div>
-            :
-            <div>
-              <p> Not signed in </p>
-              {/* <Link href="/login"> <button className="btn"> LOGIN </button> </Link> */}
-            </div>
-          }
-        </div>
+        {session ?
+          <div>
+            <p> Welcome back: {session?.user.email} </p>
+            {/* <Link href="/logout"> <button className="btn"> LOG OUT </button> </Link> */}
+          </div>
+          :
+          <div>
+            <p> Not signed in </p>
+            {/* <Link href="/login"> <button className="btn"> LOGIN </button> </Link> */}
+          </div>
+        }
+      </div>
 
+      {session ?
         <div className="mb-10">
           <h1> JOT FORM IFRAME HERE </h1>
         </div>
-      </div>
+        : <> </>
+      }
+
     </main>
   )
 }

@@ -81,8 +81,20 @@ export function LoginForm({
     }
 
     return (
-        <div className='bg-base-100 border-2 border-base-200 p-10' {...props}>
+        <div className='p-10' {...props}>
             {/* <Toaster /> */}
+
+
+            {action === 'sign-up' ?
+                <div className='text-center prose'>
+                    <h2> Healthcare professional registration </h2>
+                </div>
+                :
+                <div className='text-center prose'>
+                    <h2> Healthcare professional login </h2>
+                </div>
+            }
+
 
             <form onSubmit={handleOnSubmit}>
 
@@ -96,47 +108,227 @@ export function LoginForm({
 
                 <fieldset className="flex flex-col gap-y-4 items-center">
 
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Email:</span>
-                        </label>
-                        <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
-                            setError('')
-                            setFormState(prev => ({
-                                ...prev,
-                                email: e.target.value
-                            }))
-                        }
-                        } />
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Password:</span>
-                        </label>
-                        <input name="password" type="password" placeholder="Type here" className="input input-bordered w-full" value={formState.password} onChange={e => {
-                            setError('')
-                            setFormState(prev => ({
-                                ...prev,
-                                password: e.target.value
-                            }))
-                        }
-                        } />
-                    </div>
+                    {action === 'sign-up' ?
+                        <>
+                            <div className='flex flex-row gap-4'>
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">First name*</span>
+                                    </label>
+                                    <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                        setError('')
+                                        setFormState(prev => ({
+                                            ...prev,
+                                            email: e.target.value
+                                        }))
+                                    }
+                                    } />
+                                </div>
 
-                    {/* <div className="flex flex-col gap-y-1">
-                        <label>Password</label>
-                        <input
-                            name="password"
-                            type="password"
-                            value={formState.password}
-                            onChange={e =>
-                                setFormState(prev => ({
-                                    ...prev,
-                                    password: e.target.value
-                                }))
-                            }
-                        />
-                    </div> */}
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">Last name*</span>
+                                    </label>
+                                    <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                        setError('')
+                                        setFormState(prev => ({
+                                            ...prev,
+                                            email: e.target.value
+                                        }))
+                                    }
+                                    } />
+                                </div>
+
+                            </div>
+                            <div className='flex flex-row gap-4'>
+
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">Hospital/Clinic name*</span>
+                                    </label>
+                                    <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                        setError('')
+                                        setFormState(prev => ({
+                                            ...prev,
+                                            email: e.target.value
+                                        }))
+                                    }
+                                    } />
+                                </div>
+
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">Speciality</span>
+                                    </label>
+                                    <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                        setError('')
+                                        setFormState(prev => ({
+                                            ...prev,
+                                            email: e.target.value
+                                        }))
+                                    }
+                                    } />
+                                </div>
+                            </div>
+
+                            <div className='flex flex-row gap-4'>
+
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">Email:</span>
+                                    </label>
+                                    <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                        setError('')
+                                        setFormState(prev => ({
+                                            ...prev,
+                                            email: e.target.value
+                                        }))
+                                    }
+                                    } />
+                                </div>
+                                <div className="form-control w-full max-w-xs">
+                                    <label className="label">
+                                        <span className="label-text">Password:</span>
+                                    </label>
+                                    <input name="password" type="password" placeholder="Type here" className="input input-bordered w-full" value={formState.password} onChange={e => {
+                                        setError('')
+                                        setFormState(prev => ({
+                                            ...prev,
+                                            password: e.target.value
+                                        }))
+                                    }
+                                    } />
+                                </div>
+                            </div>
+
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text">Access code*</span>
+                                </label>
+                                <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                    setError('')
+                                    setFormState(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))
+                                }
+                                } />
+                            </div>
+
+                            <div className="form-control w-full">
+                                {/* <label className="label">
+                                    <span className="label-text">Checkbox</span>
+                                </label> */}
+                                {/* <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                    setError('')
+                                    setFormState(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))
+                                }
+                                } /> */}
+
+                                <div className="form-control">
+                                    <label className="label justify-start cursor-pointer">
+                                        <input type="checkbox" checked={true} className="checkbox mr-5" />
+                                        <span className="label-text">I confirm i am an Australian Healthcare Professional.*</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div className="form-control w-full">
+                                {/* <label className="label">
+                                    <span className="label-text">Checkbox #2</span>
+                                </label>
+                                <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                    setError('')
+                                    setFormState(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))
+                                }
+                                } /> */}
+
+                                <div className="form-control">
+                                    <label className="label justify-start cursor-pointer">
+                                        <input type="checkbox" checked={true} className="checkbox mr-5" />
+                                        <span className="label-text">
+                                            <span className='font-bold'>Communications Consent:</span>
+                                            I agree to receive communications from Ipsen via email, print and/or SMS about Ipsen’s products in the following areas:
+                                            branded product communication, new or updated TGA registrations and/or PBS listings and scientific and/or medical education activities.
+                                            <br />
+                                            The data you provide in this form will be processed in accordance with the
+                                            <a className='underline text-primary' target="_blank" href="https://www.ipsen.com/aus/privacy-policy/" rel="noopener noreferrer">
+                                                Ipsen Data Privacy Policy
+                                            </a>
+                                            that you hereby consent to.
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div className="form-control w-full">
+                                {/* <label className="label">
+                                    <span className="label-text">Checkbox #2</span>
+                                </label>
+                                <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                    setError('')
+                                    setFormState(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))
+                                }
+                                } /> */}
+
+                                <div className="form-control">
+                                    <label className="label justify-start cursor-pointer">
+                                        <input type="checkbox" checked={true} className="checkbox mr-5" />
+                                        <span className="label-text">
+                                            I confirm that i have read and agree to the
+                                            <a href=""> Terms of use, </a>
+                                            <a href=""> Privacy Policy </a>
+                                            and
+                                            <a href=""> Cookie Policy </a>
+                                            .*
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </>
+                        : <>
+
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Email:</span>
+                                </label>
+                                <input name="email" type="text" placeholder="Type here" className="input input-bordered w-full" value={formState.email} onChange={e => {
+                                    setError('')
+                                    setFormState(prev => ({
+                                        ...prev,
+                                        email: e.target.value
+                                    }))
+                                }
+                                } />
+                            </div>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Password:</span>
+                                </label>
+                                <input name="password" type="password" placeholder="Type here" className="input input-bordered w-full" value={formState.password} onChange={e => {
+                                    setError('')
+                                    setFormState(prev => ({
+                                        ...prev,
+                                        password: e.target.value
+                                    }))
+                                }
+                                } />
+                            </div>
+
+                        </>}
+
+
+
                 </fieldset>
 
                 <div className='mt-4 flex flex-row justify-center'>
@@ -177,6 +369,6 @@ export function LoginForm({
                     </p>
                 </div>
             </form>
-        </div>
+        </div >
     )
 }
