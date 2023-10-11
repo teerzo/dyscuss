@@ -46,7 +46,7 @@ export default function Navbar({ env, session }: { env: string, session: Session
 
                     </ul>
                 </div>
-                <Link href="/" className="text-primary">
+                <Link href="/" className="">
                     <div className="prose btn btn-ghost">
                         <h3> Dyscuss {env === 'development' ? <small> DEV </small> : <> </>} </h3>
                     </div>
@@ -148,13 +148,13 @@ export default function Navbar({ env, session }: { env: string, session: Session
                         <Link href="/sign-in">
                             <button className="btn mr-2"> Sign in </button>
                         </Link>
-                        <label tabIndex={0} className="btn btn-circle">
+                        {/* <label tabIndex={0} className="btn btn-circle">
 
                             <div className="flex flex-col justify-center items-center w-10 rounded-full text-center">
                                 <FaUserAlt />
 
                             </div>
-                        </label>
+                        </label> */}
                     </div>
                 }
             </div>
