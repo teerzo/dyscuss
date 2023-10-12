@@ -396,7 +396,7 @@ export function LoginForm({
                 :
                 <>
                     <div>
-                        Check yo inbox
+                        Please check your inbox to verify your email 
                     </div>
                 </>
             }
